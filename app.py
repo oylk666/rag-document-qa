@@ -49,12 +49,12 @@ def main() -> None:
 
     with st.sidebar:
         st.header("Settings")
-        llm_provider = st.selectbox("LLM Provider", ["openai", "ollama"])
+        llm_provider = st.selectbox("LLM Provider", ["ollama", "openai"])
         model_name = st.text_input(
             "Model Name",
             value=os.getenv("OPENAI_MODEL", "gpt-4o-mini")
             if llm_provider == "openai"
-            else os.getenv("OLLAMA_MODEL", "qwen2.5:3b"),
+            else os.getenv("OLLAMA_MODEL", "gemma3:12b"),
         )
         top_k = st.slider("Retrieved Chunks (k)", min_value=1, max_value=8, value=4)
         st.markdown("---")
@@ -146,8 +146,7 @@ def main() -> None:
                 st.info(
                     "常见原因：① Ollama 未启动（运行 `ollama serve`）；"
                     "② 模型名填错或未下载。先执行 `ollama list` 查看已有模型，"
-                    "或运行 `ollama pull qwen2.5:3b`。"
-                    "你本机已有 gemma3:12b，也可把 Model Name 改成 `gemma3:12b`。"
+                    "或运行 `ollama pull gemma3:12b`。"
                 )
 
 

@@ -66,7 +66,7 @@ def create_llm(provider: str, model_name: str | None = None) -> BaseLanguageMode
             ) from exc
 
         return ChatOllama(
-            model=model_name or os.getenv("OLLAMA_MODEL", "qwen2.5:3b"),
+            model=model_name or os.getenv("OLLAMA_MODEL", "gemma3:12b"),
             temperature=0,
         )
 

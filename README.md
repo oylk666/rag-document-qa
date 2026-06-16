@@ -63,7 +63,7 @@ export OPENAI_MODEL="gpt-4o-mini"   # optional
 **Option B: Ollama (local, free)**
 
 ```bash
-ollama pull qwen2.5:3b
+ollama pull gemma3:12b
 ollama serve
 ```
 
@@ -72,6 +72,7 @@ You can also create a `.env` file:
 ```
 OPENAI_API_KEY=your-api-key
 OPENAI_MODEL=gpt-4o-mini
+OLLAMA_MODEL=gemma3:12b
 ```
 
 ### 3. Run the app
