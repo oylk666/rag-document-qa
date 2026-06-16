@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+venv/
+.env
+chroma_db/
+.model_cache/
+.DS_Store
+*.egg-info/
